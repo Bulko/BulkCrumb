@@ -5,7 +5,7 @@ Depends:
 Provides: breadcrumb!
 Plugin URI:
 Description: breadcrumb!
-Version: 1.0.0
+Version: 1.1.0
 Author: Bulko
 Author URI: http://www.bulko.net/
 License: http://www.wtfpl.net/
