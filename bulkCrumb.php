@@ -18,7 +18,7 @@ if ( !function_exists( 'add_action' ) )
 //include required wp mod
 require_once( ABSPATH . '/wp-config.php' );
 add_filter('the_content', 'add_breadcrumb');
-
+add_action( 'enqueue_scripts', 'css_breadcrumb' );
 function add_breadcrumb( $content )
 {
 	if ( function_exists('yoast_breadcrumb') )
@@ -28,4 +28,9 @@ function add_breadcrumb( $content )
 		');
 	}
 	return $content;
+}
+
+function css_breadcrumb()
+{
+	wp_enqueue_style( 'css_breadcrumb', plugins_url( "breadcrumb.css", __FILE__ ) );
 }
